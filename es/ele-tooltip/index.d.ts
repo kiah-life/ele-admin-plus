@@ -1,0 +1,153 @@
+import { StyleValue } from '../ele-app/types';
+import { ElTooltipInstance, ElPopperInstance, ElTooltipContentInstance } from '../ele-app/el';
+
+declare function __VLS_template(): {
+    default?(_: {}): any;
+    body?(_: {}): any;
+    content?(_: {}): any;
+};
+declare const __VLS_component: import('vue').DefineComponent<import('vue').ExtractPropTypes<{
+    bodyStyle: import('vue').PropType<StyleValue>;
+    bg: StringConstructor;
+    arrowBg: StringConstructor;
+    width: (StringConstructor | NumberConstructor)[];
+    isPopover: BooleanConstructor;
+    effect: import('element-plus/es/utils/index').EpPropFinalized<(new (...args: any[]) => string) | (() => import('element-plus').PopperEffect) | ((new (...args: any[]) => string) | (() => import('element-plus').PopperEffect))[], unknown, unknown, "dark", boolean>;
+    ariaLabel: StringConstructor;
+    placement: import('element-plus/es/utils/index').EpPropFinalized<StringConstructor, import('element-plus').Placement, unknown, "bottom", boolean>;
+    teleported: import('element-plus/es/utils/index').EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
+    disabled: BooleanConstructor;
+    offset: import('element-plus/es/utils/index').EpPropFinalized<NumberConstructor, unknown, unknown, 12, boolean>;
+    persistent: BooleanConstructor;
+    appendTo: {
+        readonly type: import('vue').PropType<import('element-plus/es/utils/index').EpPropMergeType<(new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement) | ((new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement))[], unknown, unknown>>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
+    zIndex: NumberConstructor;
+    visible: import('element-plus/es/utils/index').EpPropFinalized<(new (...args: any[]) => boolean) | (() => boolean | null) | ((new (...args: any[]) => boolean) | (() => boolean | null))[], unknown, unknown, null, boolean>;
+    trigger: import('element-plus/es/utils/index').EpPropFinalized<(new (...args: any[]) => "click" | "contextmenu" | "focus" | "hover" | import('element-plus').TooltipTriggerType[]) | (() => import('element-plus/es/utils/typescript').Arrayable<import('element-plus').TooltipTriggerType>) | ((new (...args: any[]) => "click" | "contextmenu" | "focus" | "hover" | import('element-plus').TooltipTriggerType[]) | (() => import('element-plus/es/utils/typescript').Arrayable<import('element-plus').TooltipTriggerType>))[], unknown, unknown, "hover", boolean>;
+    triggerKeys: import('element-plus/es/utils/index').EpPropFinalized<(new (...args: any[]) => string[]) | (() => string[]) | ((new (...args: any[]) => string[]) | (() => string[]))[], unknown, unknown, () => string[], boolean>;
+    popperOptions: import('element-plus/es/utils/index').EpPropFinalized<(new (...args: any[]) => Partial<import('element-plus').Options>) | (() => Partial<import('element-plus').Options>) | ((new (...args: any[]) => Partial<import('element-plus').Options>) | (() => Partial<import('element-plus').Options>))[], unknown, unknown, () => {}, boolean>;
+    showArrow: import('element-plus/es/utils/index').EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+    transition: StringConstructor;
+    content: import('element-plus/es/utils/index').EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
+    enterable: import('element-plus/es/utils/index').EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
+    showAfter: import('element-plus/es/utils/index').EpPropFinalized<NumberConstructor, unknown, unknown, 0, boolean>;
+    hideAfter: import('element-plus/es/utils/index').EpPropFinalized<NumberConstructor, unknown, unknown, 200, boolean>;
+    autoClose: import('element-plus/es/utils/index').EpPropFinalized<NumberConstructor, unknown, unknown, 0, boolean>;
+    arrowOffset: import('element-plus/es/utils/index').EpPropFinalized<NumberConstructor, unknown, unknown, 5, boolean>;
+    virtualRef: {
+        readonly type: import('vue').PropType<import('element-plus').Measurable>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
+    virtualTriggering: BooleanConstructor;
+    rawContent: BooleanConstructor;
+    gpuAcceleration: import('element-plus/es/utils/index').EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
+    className: StringConstructor;
+    popperClass: StringConstructor;
+    popperStyle: import('vue').PropType<StyleValue>;
+}>, {
+    tooltipRef: import('vue').Ref<ElTooltipInstance | undefined, ElTooltipInstance | undefined>;
+    popperRef: import('vue').ComputedRef<ElPopperInstance>;
+    contentRef: import('vue').ComputedRef<ElTooltipContentInstance>;
+    isFocusInsideContent: () => void;
+    updatePopper: () => void;
+    handleOpen: (opt?: Event) => void;
+    handleClose: (opt?: Event) => void;
+    onOpen: (opt?: Event) => void;
+    onClose: (opt?: Event) => void;
+    hide: (opt?: Event) => void;
+}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {
+    close: (e: any) => void;
+    hide: (e: Event) => void;
+    open: (e: any) => void;
+    "update:visible": (visible: boolean) => void;
+    "before-show": (e: Event) => void;
+    "before-hide": (e: Event) => void;
+    show: (e: Event) => void;
+}, string, import('vue').PublicProps, Readonly<import('vue').ExtractPropTypes<{
+    bodyStyle: import('vue').PropType<StyleValue>;
+    bg: StringConstructor;
+    arrowBg: StringConstructor;
+    width: (StringConstructor | NumberConstructor)[];
+    isPopover: BooleanConstructor;
+    effect: import('element-plus/es/utils/index').EpPropFinalized<(new (...args: any[]) => string) | (() => import('element-plus').PopperEffect) | ((new (...args: any[]) => string) | (() => import('element-plus').PopperEffect))[], unknown, unknown, "dark", boolean>;
+    ariaLabel: StringConstructor;
+    placement: import('element-plus/es/utils/index').EpPropFinalized<StringConstructor, import('element-plus').Placement, unknown, "bottom", boolean>;
+    teleported: import('element-plus/es/utils/index').EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
+    disabled: BooleanConstructor;
+    offset: import('element-plus/es/utils/index').EpPropFinalized<NumberConstructor, unknown, unknown, 12, boolean>;
+    persistent: BooleanConstructor;
+    appendTo: {
+        readonly type: import('vue').PropType<import('element-plus/es/utils/index').EpPropMergeType<(new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement) | ((new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement))[], unknown, unknown>>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
+    zIndex: NumberConstructor;
+    visible: import('element-plus/es/utils/index').EpPropFinalized<(new (...args: any[]) => boolean) | (() => boolean | null) | ((new (...args: any[]) => boolean) | (() => boolean | null))[], unknown, unknown, null, boolean>;
+    trigger: import('element-plus/es/utils/index').EpPropFinalized<(new (...args: any[]) => "click" | "contextmenu" | "focus" | "hover" | import('element-plus').TooltipTriggerType[]) | (() => import('element-plus/es/utils/typescript').Arrayable<import('element-plus').TooltipTriggerType>) | ((new (...args: any[]) => "click" | "contextmenu" | "focus" | "hover" | import('element-plus').TooltipTriggerType[]) | (() => import('element-plus/es/utils/typescript').Arrayable<import('element-plus').TooltipTriggerType>))[], unknown, unknown, "hover", boolean>;
+    triggerKeys: import('element-plus/es/utils/index').EpPropFinalized<(new (...args: any[]) => string[]) | (() => string[]) | ((new (...args: any[]) => string[]) | (() => string[]))[], unknown, unknown, () => string[], boolean>;
+    popperOptions: import('element-plus/es/utils/index').EpPropFinalized<(new (...args: any[]) => Partial<import('element-plus').Options>) | (() => Partial<import('element-plus').Options>) | ((new (...args: any[]) => Partial<import('element-plus').Options>) | (() => Partial<import('element-plus').Options>))[], unknown, unknown, () => {}, boolean>;
+    showArrow: import('element-plus/es/utils/index').EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+    transition: StringConstructor;
+    content: import('element-plus/es/utils/index').EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
+    enterable: import('element-plus/es/utils/index').EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
+    showAfter: import('element-plus/es/utils/index').EpPropFinalized<NumberConstructor, unknown, unknown, 0, boolean>;
+    hideAfter: import('element-plus/es/utils/index').EpPropFinalized<NumberConstructor, unknown, unknown, 200, boolean>;
+    autoClose: import('element-plus/es/utils/index').EpPropFinalized<NumberConstructor, unknown, unknown, 0, boolean>;
+    arrowOffset: import('element-plus/es/utils/index').EpPropFinalized<NumberConstructor, unknown, unknown, 5, boolean>;
+    virtualRef: {
+        readonly type: import('vue').PropType<import('element-plus').Measurable>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
+    virtualTriggering: BooleanConstructor;
+    rawContent: BooleanConstructor;
+    gpuAcceleration: import('element-plus/es/utils/index').EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
+    className: StringConstructor;
+    popperClass: StringConstructor;
+    popperStyle: import('vue').PropType<StyleValue>;
+}>> & Readonly<{
+    onClose?: ((e: any) => any) | undefined;
+    onHide?: ((e: Event) => any) | undefined;
+    onOpen?: ((e: any) => any) | undefined;
+    "onUpdate:visible"?: ((visible: boolean) => any) | undefined;
+    "onBefore-show"?: ((e: Event) => any) | undefined;
+    "onBefore-hide"?: ((e: Event) => any) | undefined;
+    onShow?: ((e: Event) => any) | undefined;
+}>, {
+    effect: import('element-plus/es/utils/index').EpPropMergeType<(new (...args: any[]) => string) | (() => import('element-plus').PopperEffect) | ((new (...args: any[]) => string) | (() => import('element-plus').PopperEffect))[], unknown, unknown>;
+    placement: import('element-plus/es/utils/index').EpPropMergeType<StringConstructor, import('element-plus').Placement, unknown>;
+    teleported: import('element-plus/es/utils/index').EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    disabled: boolean;
+    offset: number;
+    persistent: boolean;
+    visible: import('element-plus/es/utils/index').EpPropMergeType<(new (...args: any[]) => boolean) | (() => boolean | null) | ((new (...args: any[]) => boolean) | (() => boolean | null))[], unknown, unknown>;
+    trigger: import('element-plus/es/utils/index').EpPropMergeType<(new (...args: any[]) => "click" | "contextmenu" | "focus" | "hover" | import('element-plus').TooltipTriggerType[]) | (() => import('element-plus/es/utils/typescript').Arrayable<import('element-plus').TooltipTriggerType>) | ((new (...args: any[]) => "click" | "contextmenu" | "focus" | "hover" | import('element-plus').TooltipTriggerType[]) | (() => import('element-plus/es/utils/typescript').Arrayable<import('element-plus').TooltipTriggerType>))[], unknown, unknown>;
+    triggerKeys: string[];
+    popperOptions: Partial<import('element-plus').Options>;
+    showArrow: import('element-plus/es/utils/index').EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    content: string;
+    enterable: import('element-plus/es/utils/index').EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    showAfter: number;
+    hideAfter: number;
+    autoClose: number;
+    arrowOffset: number;
+    virtualTriggering: boolean;
+    rawContent: boolean;
+    gpuAcceleration: import('element-plus/es/utils/index').EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    isPopover: boolean;
+}, {}, {}, {}, string, import('vue').ComponentProvideOptions, true, {}, any>;
+declare const _default: __VLS_WithTemplateSlots<typeof __VLS_component, ReturnType<typeof __VLS_template>>;
+export default _default;
+type __VLS_WithTemplateSlots<T, S> = T & {
+    new (): {
+        $slots: S;
+    };
+};

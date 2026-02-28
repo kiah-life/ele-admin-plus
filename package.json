@@ -1,0 +1,190 @@
+{
+  "name": "ele-admin-plus",
+  "version": "1.3.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host --config vite.global.ts",
+    "dev:needed": "vite --host",
+    "build": "esno scripts/build.ts",
+    "ts2js": "esno scripts/ts2js.ts",
+    "lint:eslint": "eslint --cache --max-warnings 0  \"{src,components}/**/*.{vue,js,jsx,ts,tsx}\" --fix",
+    "clean:cache": "rimraf node_modules/.cache/ && rimraf node_modules/.vite/",
+    "clean:lib": "rimraf node_modules",
+    "test": "esno scripts/test.ts"
+  },
+  "peerDependencies": {
+    "element-plus": ">=2.7.0",
+    "vue": ">=3.1.0"
+  },
+  "devDependencies": {
+    "@amap/amap-jsapi-loader": "^1.0.1",
+    "@ant-design/colors": "^7.2.0",
+    "@babel/types": "^7.26.3",
+    "@bytemd/plugin-gfm": "^1.21.0",
+    "@bytemd/plugin-highlight": "^1.21.0",
+    "@element-plus/icons-vue": "^2.3.1",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^22.10.5",
+    "@types/nprogress": "^0.2.3",
+    "@types/sortablejs": "^1.15.8",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vitejs/plugin-vue-jsx": "^4.1.1",
+    "@vue/compiler-sfc": "^3.5.13",
+    "@vueuse/core": "^12.3.0",
+    "axios": "^1.7.9",
+    "bytemd": "^1.21.0",
+    "chalk": "^5.4.1",
+    "countup.js": "^2.8.0",
+    "cropperjs": "^1.6.2",
+    "dayjs": "^1.11.13",
+    "echarts": "^5.6.0",
+    "echarts-wordcloud": "^2.1.0",
+    "element-plus": "^2.9.2",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-vue": "^9.32.0",
+    "esno": "^4.8.0",
+    "exceljs": "^4.4.0",
+    "execa": "^9.5.2",
+    "github-markdown-css": "^5.8.1",
+    "highlight.js": "^11.11.1",
+    "jsbarcode": "^3.11.6",
+    "lodash-es": "^4.17.21",
+    "monaco-editor": "^0.52.2",
+    "nprogress": "^0.2.0",
+    "p-limit": "^6.2.0",
+    "pinia": "^2.3.0",
+    "postcss": "^8.4.49",
+    "prettier": "^3.4.2",
+    "rimraf": "^6.0.1",
+    "sass": "^1.83.1",
+    "sortablejs": "^1.15.6",
+    "tinymce": "^5.10.9",
+    "typescript": "^5.7.3",
+    "unplugin-vue-components": "^28.0.0",
+    "vite": "^6.0.7",
+    "vite-plugin-dts": "^3.9.1",
+    "vue": "^3.5.13",
+    "vue-echarts": "^7.0.3",
+    "vue-eslint-parser": "^9.4.3",
+    "vue-i18n": "^11.0.1",
+    "vue-router": "^4.5.0",
+    "vue-tsc": "^2.2.0",
+    "vuedraggable": "^4.1.0",
+    "xgplayer": "^3.0.20",
+    "xgplayer-hls": "^3.0.20",
+    "xgplayer-music": "^3.0.20"
+  },
+  "main": "lib/index.cjs",
+  "module": "es/index.js",
+  "typings": "es/index.d.ts",
+  "files": [
+    "es",
+    "lib",
+    "typings/global.d.ts"
+  ],
+  "sideEffects": [
+    "*.css",
+    "*.scss",
+    "dist/*",
+    "es/*/style/**",
+    "lib/*/style/**",
+    "components/*/style/**"
+  ],
+  "exports": {
+    ".": {
+      "types": "./es/index.d.ts",
+      "import": "./es/index.js",
+      "require": "./lib/index.cjs"
+    },
+    "./es/icons": {
+      "types": "./es/icons/index.d.ts",
+      "import": "./es/icons/index.js"
+    },
+    "./lib/icons": {
+      "types": "./lib/icons/index.d.ts",
+      "require": "./lib/icons/index.cjs"
+    },
+    "./es/icons/*": {
+      "types": "./es/icons/*.d.ts",
+      "import": "./es/icons/*.js"
+    },
+    "./lib/icons/*": {
+      "types": "./lib/icons/*.d.ts",
+      "require": "./lib/icons/*.cjs"
+    },
+    "./es/lang/*": {
+      "types": "./es/lang/*.d.ts",
+      "import": "./es/lang/*.js"
+    },
+    "./lib/lang/*": {
+      "types": "./lib/lang/*.d.ts",
+      "require": "./lib/lang/*.cjs"
+    },
+    "./es/style/*": {
+      "import": "./es/style/*"
+    },
+    "./lib/style/*": {
+      "require": "./lib/style/*"
+    },
+    "./es/utils/*": {
+      "types": "./es/utils/*.d.ts",
+      "import": "./es/utils/*.js"
+    },
+    "./lib/utils/*": {
+      "types": "./lib/utils/*.d.ts",
+      "require": "./lib/utils/*.cjs"
+    },
+    "./es": {
+      "types": "./es/index.d.ts",
+      "import": "./es/index.js"
+    },
+    "./lib": {
+      "types": "./lib/index.d.ts",
+      "require": "./lib/index.cjs"
+    },
+    "./es/*.js": {
+      "types": "./es/*.d.ts",
+      "import": "./es/*.js"
+    },
+    "./es/*": {
+      "types": [
+        "./es/*.d.ts",
+        "./es/*/index.d.ts"
+      ],
+      "import": "./es/*.js"
+    },
+    "./lib/*.cjs": {
+      "types": "./lib/*.d.ts",
+      "require": "./lib/*.cjs"
+    },
+    "./lib/*": {
+      "types": [
+        "./lib/*.d.ts",
+        "./lib/*/index.d.ts"
+      ],
+      "require": "./lib/*.cjs"
+    },
+    "./typings/*": {
+      "types": "./typings/*.d.ts"
+    },
+    "./*": "./*"
+  },
+  "keywords": [
+    "vue",
+    "vue3",
+    "element",
+    "element ui",
+    "element plus",
+    "admin",
+    "ele admin"
+  ],
+  "description": "EleAdminPlus Library",
+  "author": "eclouds@foxmail.com",
+  "homepage": "https://eleadmin.com",
+  "repository": "https://eleadmin.com",
+  "license": "SEE LICENSE IN <https://eleadmin.com/copyright>"
+}

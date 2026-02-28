@@ -1,0 +1,348 @@
+import { ElTreeSelectInstance } from '../ele-app/el';
+
+declare function __VLS_template(): Partial<Record<string, (_: any) => any>>;
+declare const __VLS_component: import('vue').DefineComponent<import('vue').ExtractPropTypes<{
+    data: import('vue').PropType<import('./types').SelectTreeData | import('./types').SelectTreeDataFunction>;
+    emptyText: {
+        type: StringConstructor;
+    };
+    renderAfterExpand: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
+    nodeKey: StringConstructor;
+    checkStrictly: BooleanConstructor;
+    defaultExpandAll: BooleanConstructor;
+    expandOnClickNode: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
+    checkOnClickNode: BooleanConstructor;
+    checkDescendants: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
+    autoExpandParent: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
+    defaultCheckedKeys: import('vue').PropType<import('element-plus/es/components/tree/src/tree.type').TreeComponentProps["defaultCheckedKeys"]>;
+    defaultExpandedKeys: import('vue').PropType<import('element-plus/es/components/tree/src/tree.type').TreeComponentProps["defaultExpandedKeys"]>;
+    currentNodeKey: import('vue').PropType<string | number>;
+    renderContent: FunctionConstructor;
+    showCheckbox: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
+    draggable: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
+    allowDrag: FunctionConstructor;
+    allowDrop: FunctionConstructor;
+    props: {
+        type: import('vue').PropType<import('element-plus/es/components/tree/src/tree.type').TreeComponentProps["props"]>;
+        default: () => {
+            children: string;
+            label: string;
+            disabled: string;
+        };
+    };
+    lazy: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
+    highlightCurrent: BooleanConstructor;
+    load: import('vue').PropType<import('element-plus/es/components/tree/src/tree.type').TreeComponentProps["load"]>;
+    filterNodeMethod: import('vue').PropType<import('element-plus/es/components/tree/src/tree.type').TreeComponentProps["filterNodeMethod"]>;
+    accordion: BooleanConstructor;
+    indent: {
+        type: NumberConstructor;
+        default: number;
+    };
+    icon: {
+        type: (ObjectConstructor | StringConstructor | FunctionConstructor)[];
+    };
+    ariaLabel: StringConstructor;
+    emptyValues: ArrayConstructor;
+    valueOnClear: import('element-plus/es/utils/index').EpPropFinalized<readonly [StringConstructor, NumberConstructor, BooleanConstructor, FunctionConstructor], unknown, unknown, undefined, boolean>;
+    name: StringConstructor;
+    id: StringConstructor;
+    modelValue: import('element-plus/es/utils/index').EpPropFinalized<(ArrayConstructor | ObjectConstructor | NumberConstructor | StringConstructor | BooleanConstructor)[], unknown, unknown, undefined, boolean>;
+    autocomplete: import('element-plus/es/utils/index').EpPropFinalized<StringConstructor, unknown, unknown, string, boolean>;
+    automaticDropdown: BooleanConstructor;
+    size: {
+        readonly type: import('vue').PropType<import('element-plus/es/utils/index').EpPropMergeType<StringConstructor, "" | "small" | "default" | "large", never>>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
+    effect: import('element-plus/es/utils/index').EpPropFinalized<(new (...args: any[]) => string) | (() => import('element-plus').PopperEffect) | ((new (...args: any[]) => string) | (() => import('element-plus').PopperEffect))[], unknown, unknown, string, boolean>;
+    disabled: BooleanConstructor;
+    clearable: BooleanConstructor;
+    filterable: BooleanConstructor;
+    allowCreate: BooleanConstructor;
+    loading: BooleanConstructor;
+    popperClass: import('element-plus/es/utils/index').EpPropFinalized<StringConstructor, unknown, unknown, string, boolean>;
+    popperOptions: import('element-plus/es/utils/index').EpPropFinalized<(new (...args: any[]) => Partial<import('element-plus').Options>) | (() => Partial<import('element-plus').Options>) | ((new (...args: any[]) => Partial<import('element-plus').Options>) | (() => Partial<import('element-plus').Options>))[], unknown, unknown, () => Partial<import('element-plus').Options>, boolean>;
+    remote: BooleanConstructor;
+    loadingText: StringConstructor;
+    noMatchText: StringConstructor;
+    noDataText: StringConstructor;
+    remoteMethod: FunctionConstructor;
+    filterMethod: FunctionConstructor;
+    multiple: BooleanConstructor;
+    multipleLimit: import('element-plus/es/utils/index').EpPropFinalized<NumberConstructor, unknown, unknown, number, boolean>;
+    placeholder: {
+        readonly type: import('vue').PropType<string>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
+    defaultFirstOption: BooleanConstructor;
+    reserveKeyword: import('element-plus/es/utils/index').EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+    valueKey: import('element-plus/es/utils/index').EpPropFinalized<StringConstructor, unknown, unknown, string, boolean>;
+    collapseTags: BooleanConstructor;
+    collapseTagsTooltip: BooleanConstructor;
+    maxCollapseTags: import('element-plus/es/utils/index').EpPropFinalized<NumberConstructor, unknown, unknown, number, boolean>;
+    teleported: import('element-plus/es/utils/index').EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
+    persistent: import('element-plus/es/utils/index').EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+    clearIcon: {
+        readonly type: import('vue').PropType<import('element-plus/es/utils/index').EpPropMergeType<(new (...args: any[]) => (string | import('vue').Component) & {}) | (() => string | import('vue').Component) | ((new (...args: any[]) => (string | import('vue').Component) & {}) | (() => string | import('vue').Component))[], unknown, unknown>>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
+    fitInputWidth: BooleanConstructor;
+    suffixIcon: {
+        readonly type: import('vue').PropType<import('element-plus/es/utils/index').EpPropMergeType<(new (...args: any[]) => (string | import('vue').Component) & {}) | (() => string | import('vue').Component) | ((new (...args: any[]) => (string | import('vue').Component) & {}) | (() => string | import('vue').Component))[], unknown, unknown>>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
+    tagType: {
+        default: string;
+        type: import('vue').PropType<import('element-plus/es/utils/index').EpPropMergeType<StringConstructor, "success" | "warning" | "info" | "primary" | "danger", unknown>>;
+        required: false;
+        validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
+    tagEffect: {
+        default: string;
+        type: import('vue').PropType<import('element-plus/es/utils/index').EpPropMergeType<StringConstructor, "dark" | "light" | "plain", unknown>>;
+        required: false;
+        validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
+    validateEvent: import('element-plus/es/utils/index').EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+    remoteShowSuffix: BooleanConstructor;
+    showArrow: import('element-plus/es/utils/index').EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+    offset: import('element-plus/es/utils/index').EpPropFinalized<NumberConstructor, unknown, unknown, number, boolean>;
+    placement: import('element-plus/es/utils/index').EpPropFinalized<(new (...args: any[]) => "top" | "bottom" | "left" | "right" | "auto" | "auto-start" | "auto-end" | "top-start" | "top-end" | "bottom-start" | "bottom-end" | "right-start" | "right-end" | "left-start" | "left-end") | (() => import('element-plus').Placement) | ((new (...args: any[]) => "top" | "bottom" | "left" | "right" | "auto" | "auto-start" | "auto-end" | "top-start" | "top-end" | "bottom-start" | "bottom-end" | "right-start" | "right-end" | "left-start" | "left-end") | (() => import('element-plus').Placement))[], import('element-plus').Placement, unknown, string, boolean>;
+    fallbackPlacements: import('element-plus/es/utils/index').EpPropFinalized<(new (...args: any[]) => import('element-plus').Placement[]) | (() => import('element-plus').Placement[]) | ((new (...args: any[]) => import('element-plus').Placement[]) | (() => import('element-plus').Placement[]))[], unknown, unknown, string[], boolean>;
+    tabindex: import('element-plus/es/utils/index').EpPropFinalized<(NumberConstructor | StringConstructor)[], unknown, unknown, number, boolean>;
+    appendTo: StringConstructor;
+}>, {
+    reloadOptions: () => void;
+    treeSelectRef: import('vue').Ref<ElTreeSelectInstance, ElTreeSelectInstance>;
+}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {
+    "update:modelValue": (_value: any) => void;
+}, string, import('vue').PublicProps, Readonly<import('vue').ExtractPropTypes<{
+    data: import('vue').PropType<import('./types').SelectTreeData | import('./types').SelectTreeDataFunction>;
+    emptyText: {
+        type: StringConstructor;
+    };
+    renderAfterExpand: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
+    nodeKey: StringConstructor;
+    checkStrictly: BooleanConstructor;
+    defaultExpandAll: BooleanConstructor;
+    expandOnClickNode: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
+    checkOnClickNode: BooleanConstructor;
+    checkDescendants: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
+    autoExpandParent: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
+    defaultCheckedKeys: import('vue').PropType<import('element-plus/es/components/tree/src/tree.type').TreeComponentProps["defaultCheckedKeys"]>;
+    defaultExpandedKeys: import('vue').PropType<import('element-plus/es/components/tree/src/tree.type').TreeComponentProps["defaultExpandedKeys"]>;
+    currentNodeKey: import('vue').PropType<string | number>;
+    renderContent: FunctionConstructor;
+    showCheckbox: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
+    draggable: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
+    allowDrag: FunctionConstructor;
+    allowDrop: FunctionConstructor;
+    props: {
+        type: import('vue').PropType<import('element-plus/es/components/tree/src/tree.type').TreeComponentProps["props"]>;
+        default: () => {
+            children: string;
+            label: string;
+            disabled: string;
+        };
+    };
+    lazy: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
+    highlightCurrent: BooleanConstructor;
+    load: import('vue').PropType<import('element-plus/es/components/tree/src/tree.type').TreeComponentProps["load"]>;
+    filterNodeMethod: import('vue').PropType<import('element-plus/es/components/tree/src/tree.type').TreeComponentProps["filterNodeMethod"]>;
+    accordion: BooleanConstructor;
+    indent: {
+        type: NumberConstructor;
+        default: number;
+    };
+    icon: {
+        type: (ObjectConstructor | StringConstructor | FunctionConstructor)[];
+    };
+    ariaLabel: StringConstructor;
+    emptyValues: ArrayConstructor;
+    valueOnClear: import('element-plus/es/utils/index').EpPropFinalized<readonly [StringConstructor, NumberConstructor, BooleanConstructor, FunctionConstructor], unknown, unknown, undefined, boolean>;
+    name: StringConstructor;
+    id: StringConstructor;
+    modelValue: import('element-plus/es/utils/index').EpPropFinalized<(ArrayConstructor | ObjectConstructor | NumberConstructor | StringConstructor | BooleanConstructor)[], unknown, unknown, undefined, boolean>;
+    autocomplete: import('element-plus/es/utils/index').EpPropFinalized<StringConstructor, unknown, unknown, string, boolean>;
+    automaticDropdown: BooleanConstructor;
+    size: {
+        readonly type: import('vue').PropType<import('element-plus/es/utils/index').EpPropMergeType<StringConstructor, "" | "small" | "default" | "large", never>>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
+    effect: import('element-plus/es/utils/index').EpPropFinalized<(new (...args: any[]) => string) | (() => import('element-plus').PopperEffect) | ((new (...args: any[]) => string) | (() => import('element-plus').PopperEffect))[], unknown, unknown, string, boolean>;
+    disabled: BooleanConstructor;
+    clearable: BooleanConstructor;
+    filterable: BooleanConstructor;
+    allowCreate: BooleanConstructor;
+    loading: BooleanConstructor;
+    popperClass: import('element-plus/es/utils/index').EpPropFinalized<StringConstructor, unknown, unknown, string, boolean>;
+    popperOptions: import('element-plus/es/utils/index').EpPropFinalized<(new (...args: any[]) => Partial<import('element-plus').Options>) | (() => Partial<import('element-plus').Options>) | ((new (...args: any[]) => Partial<import('element-plus').Options>) | (() => Partial<import('element-plus').Options>))[], unknown, unknown, () => Partial<import('element-plus').Options>, boolean>;
+    remote: BooleanConstructor;
+    loadingText: StringConstructor;
+    noMatchText: StringConstructor;
+    noDataText: StringConstructor;
+    remoteMethod: FunctionConstructor;
+    filterMethod: FunctionConstructor;
+    multiple: BooleanConstructor;
+    multipleLimit: import('element-plus/es/utils/index').EpPropFinalized<NumberConstructor, unknown, unknown, number, boolean>;
+    placeholder: {
+        readonly type: import('vue').PropType<string>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
+    defaultFirstOption: BooleanConstructor;
+    reserveKeyword: import('element-plus/es/utils/index').EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+    valueKey: import('element-plus/es/utils/index').EpPropFinalized<StringConstructor, unknown, unknown, string, boolean>;
+    collapseTags: BooleanConstructor;
+    collapseTagsTooltip: BooleanConstructor;
+    maxCollapseTags: import('element-plus/es/utils/index').EpPropFinalized<NumberConstructor, unknown, unknown, number, boolean>;
+    teleported: import('element-plus/es/utils/index').EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
+    persistent: import('element-plus/es/utils/index').EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+    clearIcon: {
+        readonly type: import('vue').PropType<import('element-plus/es/utils/index').EpPropMergeType<(new (...args: any[]) => (string | import('vue').Component) & {}) | (() => string | import('vue').Component) | ((new (...args: any[]) => (string | import('vue').Component) & {}) | (() => string | import('vue').Component))[], unknown, unknown>>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
+    fitInputWidth: BooleanConstructor;
+    suffixIcon: {
+        readonly type: import('vue').PropType<import('element-plus/es/utils/index').EpPropMergeType<(new (...args: any[]) => (string | import('vue').Component) & {}) | (() => string | import('vue').Component) | ((new (...args: any[]) => (string | import('vue').Component) & {}) | (() => string | import('vue').Component))[], unknown, unknown>>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
+    tagType: {
+        default: string;
+        type: import('vue').PropType<import('element-plus/es/utils/index').EpPropMergeType<StringConstructor, "success" | "warning" | "info" | "primary" | "danger", unknown>>;
+        required: false;
+        validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
+    tagEffect: {
+        default: string;
+        type: import('vue').PropType<import('element-plus/es/utils/index').EpPropMergeType<StringConstructor, "dark" | "light" | "plain", unknown>>;
+        required: false;
+        validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
+    validateEvent: import('element-plus/es/utils/index').EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+    remoteShowSuffix: BooleanConstructor;
+    showArrow: import('element-plus/es/utils/index').EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+    offset: import('element-plus/es/utils/index').EpPropFinalized<NumberConstructor, unknown, unknown, number, boolean>;
+    placement: import('element-plus/es/utils/index').EpPropFinalized<(new (...args: any[]) => "top" | "bottom" | "left" | "right" | "auto" | "auto-start" | "auto-end" | "top-start" | "top-end" | "bottom-start" | "bottom-end" | "right-start" | "right-end" | "left-start" | "left-end") | (() => import('element-plus').Placement) | ((new (...args: any[]) => "top" | "bottom" | "left" | "right" | "auto" | "auto-start" | "auto-end" | "top-start" | "top-end" | "bottom-start" | "bottom-end" | "right-start" | "right-end" | "left-start" | "left-end") | (() => import('element-plus').Placement))[], import('element-plus').Placement, unknown, string, boolean>;
+    fallbackPlacements: import('element-plus/es/utils/index').EpPropFinalized<(new (...args: any[]) => import('element-plus').Placement[]) | (() => import('element-plus').Placement[]) | ((new (...args: any[]) => import('element-plus').Placement[]) | (() => import('element-plus').Placement[]))[], unknown, unknown, string[], boolean>;
+    tabindex: import('element-plus/es/utils/index').EpPropFinalized<(NumberConstructor | StringConstructor)[], unknown, unknown, number, boolean>;
+    appendTo: StringConstructor;
+}>> & Readonly<{
+    "onUpdate:modelValue"?: ((_value: any) => any) | undefined;
+}>, {
+    effect: import('element-plus/es/utils/index').EpPropMergeType<(new (...args: any[]) => string) | (() => import('element-plus').PopperEffect) | ((new (...args: any[]) => string) | (() => import('element-plus').PopperEffect))[], unknown, unknown>;
+    valueKey: string;
+    modelValue: import('element-plus/es/utils/index').EpPropMergeType<(BooleanConstructor | ObjectConstructor | StringConstructor | NumberConstructor | ArrayConstructor)[], unknown, unknown>;
+    placement: import('element-plus/es/utils/index').EpPropMergeType<(new (...args: any[]) => "top" | "bottom" | "left" | "right" | "auto" | "auto-start" | "auto-end" | "top-start" | "top-end" | "bottom-start" | "bottom-end" | "right-start" | "right-end" | "left-start" | "left-end") | (() => import('element-plus').Placement) | ((new (...args: any[]) => "top" | "bottom" | "left" | "right" | "auto" | "auto-start" | "auto-end" | "top-start" | "top-end" | "bottom-start" | "bottom-end" | "right-start" | "right-end" | "left-start" | "left-end") | (() => import('element-plus').Placement))[], import('element-plus').Placement, unknown>;
+    popperClass: string;
+    teleported: import('element-plus/es/utils/index').EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    fitInputWidth: boolean;
+    clearable: boolean;
+    disabled: boolean;
+    loading: boolean;
+    offset: number;
+    valueOnClear: import('element-plus/es/utils/index').EpPropMergeType<readonly [StringConstructor, NumberConstructor, BooleanConstructor, FunctionConstructor], unknown, unknown>;
+    filterable: boolean;
+    collapseTags: boolean;
+    maxCollapseTags: number;
+    collapseTagsTooltip: boolean;
+    fallbackPlacements: import('element-plus').Placement[];
+    tagType: import('element-plus/es/utils/index').EpPropMergeType<StringConstructor, "success" | "warning" | "info" | "primary" | "danger", unknown>;
+    tagEffect: import('element-plus/es/utils/index').EpPropMergeType<StringConstructor, "dark" | "light" | "plain", unknown>;
+    validateEvent: import('element-plus/es/utils/index').EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    persistent: import('element-plus/es/utils/index').EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    props: import('element-plus/es/components/tree/src/tree.type').TreeOptionProps;
+    draggable: boolean;
+    popperOptions: Partial<import('element-plus').Options>;
+    tabindex: import('element-plus/es/utils/index').EpPropMergeType<(StringConstructor | NumberConstructor)[], unknown, unknown>;
+    lazy: boolean;
+    autocomplete: string;
+    showArrow: import('element-plus/es/utils/index').EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    automaticDropdown: boolean;
+    allowCreate: boolean;
+    remote: boolean;
+    multiple: boolean;
+    multipleLimit: number;
+    defaultFirstOption: boolean;
+    reserveKeyword: import('element-plus/es/utils/index').EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    remoteShowSuffix: boolean;
+    defaultExpandAll: boolean;
+    indent: number;
+    highlightCurrent: boolean;
+    showCheckbox: boolean;
+    checkStrictly: boolean;
+    expandOnClickNode: boolean;
+    checkOnClickNode: boolean;
+    accordion: boolean;
+    renderAfterExpand: boolean;
+    checkDescendants: boolean;
+    autoExpandParent: boolean;
+}, {}, {}, {}, string, import('vue').ComponentProvideOptions, true, {}, any>;
+declare const _default: __VLS_WithTemplateSlots<typeof __VLS_component, ReturnType<typeof __VLS_template>>;
+export default _default;
+type __VLS_WithTemplateSlots<T, S> = T & {
+    new (): {
+        $slots: S;
+    };
+};
